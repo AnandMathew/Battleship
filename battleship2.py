@@ -1,7 +1,7 @@
 from random import randint
 
 board = []
-
+# Create a 5 x 5 board consisting of "O"s
 for x in range(5):
     board.append(["O"] * 5)
 
@@ -11,7 +11,7 @@ def print_board(board):
 
 print "Let's play Battleship!"
 print_board(board)
-
+# Program chooses a random pair of co-ordinates
 def random_row(board):
     return randint(0, len(board) - 1)
 
@@ -21,7 +21,7 @@ def random_col(board):
 ship_row = random_row(board)
 ship_col = random_col(board)
 
-
+#There will be four turns. After a guess is made, that coordinate changes from "O" to "X". 
 for turn in range(4):
     guess_row = int(raw_input("Guess Row:"))
     guess_col = int(raw_input("Guess Col:"))
